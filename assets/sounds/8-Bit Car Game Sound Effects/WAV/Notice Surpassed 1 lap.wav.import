@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Notice Surpassed 1 lap.wav-cff37905e0aadbffc18c5f78e15cdca8.sample"
+
+[deps]
+
+source_file="res://assets/sounds/8-Bit Car Game Sound Effects/WAV/Notice Surpassed 1 lap.wav"
+dest_files=[ "res://.import/Notice Surpassed 1 lap.wav-cff37905e0aadbffc18c5f78e15cdca8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

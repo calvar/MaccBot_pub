@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/images/mal-bot.png" type="Texture" id=1]
+[ext_resource path="res://actors/Bot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://actors/MAL_bot.gd" type="Script" id=3]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[node name="MAL_bot" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource( 1 )
+frame = 3
+
+[node name="AnimationTree" parent="Sprite" index="1"]
+parameters/playback = SubResource( 1 )

@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/images/macc-bot.png" type="Texture" id=1]
+[ext_resource path="res://actors/Bot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://actors/MACC_bot.gd" type="Script" id=3]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[node name="MACC_bot" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource( 1 )
+frame = 36
+
+[node name="AnimationTree" parent="Sprite" index="1"]
+parameters/playback = SubResource( 1 )
+parameters/pick/blend_position = Vector2( 0, 0 )
+parameters/walk/blend_position = Vector2( 0, 0 )

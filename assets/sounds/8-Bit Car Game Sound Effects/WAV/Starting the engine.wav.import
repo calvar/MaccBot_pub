@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Starting the engine.wav-0114b41df54c4f70950f42a726d9390d.sample"
+
+[deps]
+
+source_file="res://assets/sounds/8-Bit Car Game Sound Effects/WAV/Starting the engine.wav"
+dest_files=[ "res://.import/Starting the engine.wav-0114b41df54c4f70950f42a726d9390d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

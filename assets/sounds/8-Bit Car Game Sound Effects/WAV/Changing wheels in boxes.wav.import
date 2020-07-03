@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Changing wheels in boxes.wav-1ee1979fa3b50e4077c532aa7d887908.sample"
+
+[deps]
+
+source_file="res://assets/sounds/8-Bit Car Game Sound Effects/WAV/Changing wheels in boxes.wav"
+dest_files=[ "res://.import/Changing wheels in boxes.wav-1ee1979fa3b50e4077c532aa7d887908.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

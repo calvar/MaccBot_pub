@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Replaced the engine.wav-1ec94b2f0a31afa700a6f035435f8e78.sample"
+
+[deps]
+
+source_file="res://assets/sounds/8-Bit Car Game Sound Effects/WAV/Replaced the engine.wav"
+dest_files=[ "res://.import/Replaced the engine.wav-1ec94b2f0a31afa700a6f035435f8e78.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

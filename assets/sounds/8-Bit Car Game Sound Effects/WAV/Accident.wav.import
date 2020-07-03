@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Accident.wav-470bcaa7799c03192f5641cea364e856.sample"
+
+[deps]
+
+source_file="res://assets/sounds/8-Bit Car Game Sound Effects/WAV/Accident.wav"
+dest_files=[ "res://.import/Accident.wav-470bcaa7799c03192f5641cea364e856.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

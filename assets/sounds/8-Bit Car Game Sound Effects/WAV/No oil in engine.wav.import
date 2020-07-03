@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/No oil in engine.wav-0e6bd6b26eecda99f38eeef9a0c3044d.sample"
+
+[deps]
+
+source_file="res://assets/sounds/8-Bit Car Game Sound Effects/WAV/No oil in engine.wav"
+dest_files=[ "res://.import/No oil in engine.wav-0e6bd6b26eecda99f38eeef9a0c3044d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/You advance to a rival.wav-b47d272b1d7cd74a78d18045d48fee7c.sample"
+
+[deps]
+
+source_file="res://assets/sounds/8-Bit Car Game Sound Effects/WAV/You advance to a rival.wav"
+dest_files=[ "res://.import/You advance to a rival.wav-b47d272b1d7cd74a78d18045d48fee7c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

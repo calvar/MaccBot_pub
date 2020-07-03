@@ -1,0 +1,408 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://actors/Bot.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.9034, 15.9028 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "explode"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 36, 37, 38 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 30, 31, 32 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 21, 22, 23 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "idle-l"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 33, 34, 35 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 24, 25, 26 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "pick-l"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 15, 16, 17 ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 13, 14 ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 27, 28, 29 ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 18, 19, 20 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "walk-l"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "explode"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=16]
+blend_point_0/node = SubResource( 15 )
+blend_point_0/pos = Vector2( 0, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "idle-f"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "idle-b"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "idle-l"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "idle-r"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=21]
+blend_point_0/node = SubResource( 17 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 18 )
+blend_point_1/pos = Vector2( 0, -1 )
+blend_point_2/node = SubResource( 19 )
+blend_point_2/pos = Vector2( -1, 0 )
+blend_point_3/node = SubResource( 20 )
+blend_point_3/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "pick-f"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "pick-b"
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "pick-l"
+
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "pick-r"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=26]
+blend_point_0/node = SubResource( 22 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 23 )
+blend_point_1/pos = Vector2( 0, -1 )
+blend_point_2/node = SubResource( 24 )
+blend_point_2/pos = Vector2( -1, 0 )
+blend_point_3/node = SubResource( 25 )
+blend_point_3/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "walk-f"
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "walk-b"
+
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "walk-l"
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "walk-r"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=31]
+blend_point_0/node = SubResource( 27 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 28 )
+blend_point_1/pos = Vector2( 0, -1 )
+blend_point_2/node = SubResource( 29 )
+blend_point_2/pos = Vector2( -1, 0 )
+blend_point_3/node = SubResource( 30 )
+blend_point_3/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+
+[sub_resource type="AnimationNodeStateMachine" id=37]
+states/explode/node = SubResource( 16 )
+states/explode/position = Vector2( 299, 221 )
+states/idle/node = SubResource( 21 )
+states/idle/position = Vector2( 299, 138 )
+states/pick/node = SubResource( 26 )
+states/pick/position = Vector2( 299, 34 )
+states/walk/node = SubResource( 31 )
+states/walk/position = Vector2( 492, 138 )
+transitions = [ "idle", "pick", SubResource( 32 ), "pick", "idle", SubResource( 33 ), "idle", "walk", SubResource( 34 ), "walk", "idle", SubResource( 35 ), "idle", "explode", SubResource( 36 ) ]
+start_node = "idle"
+graph_offset = Vector2( 0, 13.6126 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=38]
+
+[sub_resource type="RectangleShape2D" id=39]
+extents = Vector2( 9.91556, 6.21616 )
+
+[node name="Bot" type="KinematicBody2D"]
+position = Vector2( 353.403, 221.606 )
+collision_mask = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.0977478, -9.8046 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 3.05176e-05, -10.916 )
+vframes = 13
+hframes = 3
+frame = 21
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+anims/explode = SubResource( 2 )
+anims/idle-b = SubResource( 3 )
+anims/idle-f = SubResource( 4 )
+anims/idle-l = SubResource( 5 )
+anims/idle-r = SubResource( 6 )
+anims/pick-b = SubResource( 7 )
+anims/pick-f = SubResource( 8 )
+anims/pick-l = SubResource( 9 )
+anims/pick-r = SubResource( 10 )
+anims/walk-b = SubResource( 11 )
+anims/walk-f = SubResource( 12 )
+anims/walk-l = SubResource( 13 )
+anims/walk-r = SubResource( 14 )
+
+[node name="AnimationTree" type="AnimationTree" parent="Sprite"]
+tree_root = SubResource( 37 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 38 )
+parameters/explode/blend_position = Vector2( 0, 0 )
+parameters/idle/blend_position = Vector2( -0.114062, 0.301724 )
+parameters/pick/blend_position = Vector2( -0.2125, -0.525862 )
+parameters/walk/blend_position = Vector2( 0.595312, 0.215517 )
+
+[node name="RayUp" type="RayCast2D" parent="."]
+position = Vector2( 0.00137334, -0.0265503 )
+enabled = true
+cast_to = Vector2( 0, -40 )
+collision_mask = 2
+
+[node name="RayDown" type="RayCast2D" parent="."]
+position = Vector2( -0.0993653, -0.0822806 )
+enabled = true
+cast_to = Vector2( 0, 40 )
+collision_mask = 2
+
+[node name="RayRight" type="RayCast2D" parent="."]
+position = Vector2( 0.0994873, 0.0177197 )
+enabled = true
+cast_to = Vector2( 40, 0 )
+collision_mask = 2
+
+[node name="RayLeft" type="RayCast2D" parent="."]
+position = Vector2( -0.0265503, 0.00855482 )
+enabled = true
+cast_to = Vector2( -40, 0 )
+collision_mask = 2
+
+[node name="detectBeeperArea" type="Area2D" parent="."]
+position = Vector2( 0.0769653, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectBeeperArea"]
+modulate = Color( 0.137255, 0.854902, 0.133333, 1 )
+self_modulate = Color( 0.0745098, 0.784314, 0.0705882, 1 )
+shape = SubResource( 39 )
+
+[node name="IdleTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="PickTimer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+[connection signal="area_entered" from="detectBeeperArea" to="." method="_on_detectBeeperArea_area_entered"]
+[connection signal="timeout" from="IdleTimer" to="." method="_on_IdleTimer_timeout"]
+[connection signal="timeout" from="PickTimer" to="." method="_on_PickTimer_timeout"]

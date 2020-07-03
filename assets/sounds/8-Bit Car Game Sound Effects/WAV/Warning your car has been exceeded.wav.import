@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Warning your car has been exceeded.wav-12e0bfbec43a7e2de2ac8b689e55666a.sample"
+
+[deps]
+
+source_file="res://assets/sounds/8-Bit Car Game Sound Effects/WAV/Warning your car has been exceeded.wav"
+dest_files=[ "res://.import/Warning your car has been exceeded.wav-12e0bfbec43a7e2de2ac8b689e55666a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
