@@ -624,5 +624,7 @@ tile_data = PoolIntArray( 0, 1, 0, 1, 1, 2, 2, 1, 2, 3, 1, 2, 4, 1, 2, 5, 1, 2, 
 
 [node name="RoundTimer" type="Timer" parent="."]
 wait_time = 2.0
-one_shot = true
+
+[node name="Clock" type="Timer" parent="."]
 [connection signal="timeout" from="RoundTimer" to="." method="_on_RoundTimer_timeout"]
+[connection signal="timeout" from="Clock" to="." method="_on_Clock_timeout"]

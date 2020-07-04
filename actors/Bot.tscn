@@ -396,13 +396,8 @@ modulate = Color( 0.137255, 0.854902, 0.133333, 1 )
 self_modulate = Color( 0.0745098, 0.784314, 0.0705882, 1 )
 shape = SubResource( 39 )
 
-[node name="IdleTimer" type="Timer" parent="."]
-wait_time = 0.3
-one_shot = true
-
 [node name="PickTimer" type="Timer" parent="."]
 wait_time = 0.6
 one_shot = true
 [connection signal="area_entered" from="detectBeeperArea" to="." method="_on_detectBeeperArea_area_entered"]
-[connection signal="timeout" from="IdleTimer" to="." method="_on_IdleTimer_timeout"]
 [connection signal="timeout" from="PickTimer" to="." method="_on_PickTimer_timeout"]

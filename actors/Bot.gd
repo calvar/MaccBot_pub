@@ -12,7 +12,6 @@ onready var ray_left = get_node("RayLeft")
 onready var idle_timer = get_node("IdleTimer")
 onready var pick_timer = get_node("PickTimer")
 
-
 var orientation = {'up': Vector2(0,-1),
 	'down': Vector2(0,1),
 	'right': Vector2(1,0),
@@ -37,6 +36,11 @@ var over_beeper = false
 var instructions = []
 var instruction
 
+var game_turn = 0
+var old_game_turn = 0
+
+var count_turns = 0
+
 signal collide
 
 
@@ -53,11 +57,13 @@ func _physics_process(delta):
 		DEAD:
 			pass
 	velocity = move_and_slide(velocity)
+	#print(old_game_turn," ",game_turn)
+
 
 
 func action():
 	instruction = read_instruction()
-	#if instruction != "none": print(instruction)
+	if instruction != "none": print(instruction)
 	if instruction == "move":
 		state = MOVE
 	elif instruction == "turn_left":
@@ -67,9 +73,19 @@ func action():
 
 func read_instruction():
 	var instruction = "pick_beeper" if state == PICK else "none"
-	if state == IDLE and instructions.size() > 0:
-		instruction = instructions[0]
-		instructions.pop_front()
+	if (state == IDLE) and instructions.size() > 0:
+		while true:
+			instruction = instructions[0]
+			if instruction == "turn_left":
+				count_turns += 1
+				instructions.pop_front()
+			elif count_turns == 0:
+				instructions.pop_front()
+				break
+			else:
+				instruction = "turn_left"
+				break
+	#print(count_turns)
 	return instruction
 
 
@@ -87,9 +103,7 @@ func compute_destination():
 func move_state():
 	#print("into move state")
 	if global_position.distance_to(destination) < POSITION_ERROR:
-		#Compute the new destination
-		correct_position()
-		compute_destination()
+		velocity = Vector2(0,0)
 		state = IDLE
 	else:
 		velocity = facing * SPEED
@@ -104,11 +118,7 @@ func move_state():
 			print("can't go through wall")
 			emit_signal("collide")
 
-
-
-func turn_state():
-	#print("into turn state")
-	velocity = Vector2(0,0)
+func turn_left():
 	if facing == orientation['right']:
 		facing = orientation['up']
 	elif facing == orientation['up']:
@@ -117,20 +127,27 @@ func turn_state():
 		facing = orientation['down']
 	elif facing == orientation['down']:
 		facing = orientation['right']
-		
 	animationTree.set("parameters/idle/blend_position",facing)
 	animationState.travel("idle")
-	compute_destination()
+
+func turn_state():
+	#print("into turn state")
+	for i in range(count_turns):
+		turn_left()
+	count_turns = 0
 	state = IDLE
 
 
 func idle_state():
 	#print("into idle state")
-	velocity = Vector2(0,0)
-	animationTree.set("parameters/idle/blend_position",facing)
-	animationState.travel("idle")
-	if idle_timer.is_stopped():
-		idle_timer.start()
+	if game_turn > old_game_turn:
+		old_game_turn = game_turn
+		#compute_destination()
+		correct_position()
+		compute_destination()
+		animationTree.set("parameters/idle/blend_position",facing)
+		animationState.travel("idle")
+		action()
 
 
 
@@ -157,11 +174,6 @@ func explode():
 	animationTree.set("parameters/explode/blend_position",facing)
 	animationState.travel("explode")
 	state = DEAD
-
-
-func _on_IdleTimer_timeout():
-	action()
-	#print("STOP")
 
 
 func _on_PickTimer_timeout():

@@ -4,6 +4,7 @@ onready var macc_bot = get_node("/root").find_node("MACC_bot",true,false)
 
 const CATCH_RANGE = 4
 
+var id
 
 func _ready():
 	facing = orientation['left']
@@ -12,8 +13,11 @@ func _ready():
 
 #func _physics_process(delta):
 #	._physics_process(delta)
+#	#print(state,instruction,instructions)
+#	#print(old_game_turn," ",game_turn)
 
 func set_instructions():
+	#print(macc_in_LOS())
 	if macc_in_LOS():
 		var d = macc_bot.destination - global_position
 		#print(d.length())
@@ -101,6 +105,7 @@ func go_right():
 func macc_in_LOS():
 	var space = get_world_2d().direct_space_state
 	var obstacle = space.intersect_ray(global_position,macc_bot.global_position,[self],collision_mask)
+	#print(obstacle.collider == macc_bot)
 	if not obstacle:
 		return false
 	if obstacle.collider == macc_bot:
@@ -109,4 +114,5 @@ func macc_in_LOS():
 		return false
 	
 func _on_MACC_bot_moved():
+	#print("macc moved")
 	set_instructions()
