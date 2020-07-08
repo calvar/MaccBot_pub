@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="MaccBot"
+config/name="MaccBot_pub"
 run/main_scene="res://levels/Level1.tscn"
 
 [layer_names]
